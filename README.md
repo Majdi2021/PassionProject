@@ -1,0 +1,2 @@
+# Passion Project
+RenTool is a web application that manages tools, and customers for a Tools Rental shop. Alex, a constructions worker, can come to our website and see all the available tools for rent. Alex can also see the inventory of specific tool if he wants to rent. Jessica, a housewife, can also come to our website to see if we have available carpet cleaner for rent. An Admin, Majdi, can add, update, see, and delete information about tools and customers.
