@@ -1,0 +1,44 @@
+﻿@model PassionProject.Models.ViewModels.NewRental
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create Rental</h2>
+<form action="/Rental/Create" method="post">
+    <div>
+        <label>Rental date:</label>
+        <input type="datetime" name="RentalDate" />
+    </div>
+
+    <div>
+        <label> Return Date:</label>
+        <input type="datetime" name="ReturnDate" />
+    </div>
+
+    <div>
+        <label> Customer name:</label>
+        <select name="CustomerId">
+            @foreach (var customer in Model.customersoptions)
+            {
+                <option value="@customer.CustomerId">@customer.CustomerName</option>
+
+            }
+        </select>
+    </div>
+
+    <div>
+        <label> Tool Name:</label>
+        <select name="ToolId">
+            @foreach (var tool in Model.toolsoptions)
+            {
+                <option value="@tool.ToolId">@tool.ToolName</option>
+
+            }
+        </select>
+    </div>
+
+    <div>
+        <input type="submit" value="Add Rental" />
+    </div>
+</form>
+

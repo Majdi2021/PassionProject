@@ -1,0 +1,61 @@
+﻿@model PassionProject.Models.ViewModels.UpdateRental
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Update Rental</h2>
+<nav>
+    <ul>
+        <li><a href="/Rental/List">Go back to list</a></li>
+
+
+    </ul>
+</nav>
+<form action="/Rental/Update/@Model.selectedrental.RentalId" method="POST" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <div style="display:none;">
+
+                <input type="text" name="RentalId" value="@Model.selectedrental.RentalId" />
+            </div>
+            <div>
+                <label>Renta Date: </label> <input type="datetime" name="RentalDate" value="@Model.selectedrental.RentalDate" />
+            </div>
+            <div>
+                <label>Return Date:</label> <input type="datetime" name="ReturnDate" value="@Model.selectedrental.ReturnDate" />
+            </div>
+            <div>
+                <label>Customer:</label>
+
+                <select name="CustomerId">
+                    @foreach (var customer in Model.customersoptions)
+                    {
+
+                        <option value="@customer.CustomerId">@customer.CustomerName</option>
+
+                    }
+                </select>
+            </div>
+
+            <div>
+                <label>Tool:</label>
+
+                <select name="ToolId">
+                    @foreach (var tool in Model.toolsoptions)
+                    {
+
+                        <option value="@tool.ToolId">@tool.ToolName</option>
+
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+    <div>
+        <input type="submit" value="Update Rental" />
+
+    </div>
+
+</form>
+

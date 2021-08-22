@@ -1,0 +1,16 @@
+﻿@model PassionProject.Models.CustomerDto
+@{
+    ViewBag.Title = "View";
+}
+
+<nav>
+    <ul>
+        <li><a href="/Customer/List">Go back to list</a></li>
+        <li><a style="color:#ab2020;" href="/Customer/DeleteConfirm/@Model.CustomerId">Delete Customer</a></li>
+    </ul>
+</nav>
+<br>
+
+<h2>@Model.CustomerName</h2>
+<div>@Model.CustomerPhone</div>
+

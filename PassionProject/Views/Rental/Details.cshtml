@@ -1,0 +1,21 @@
+﻿@model PassionProject.Models.RentalDto
+@{
+    ViewBag.Title = "View";
+}
+
+<nav>
+    <ul>
+        <li><a href="/Rental/List">Go back to list</a></li>
+        <li><a href="/Rental/Edit/@Model.RentalId">Update</a></li>
+        <li><a style="color:#ab2020;" href="/Rental/DeleteConfirm/@Model.RentalId">Delete the rental</a></li>
+    </ul>
+</nav>
+
+<br>
+
+<h2>@Model.CustomerName</h2>
+<div>Rental Date: @Model.RentalId</div>
+<div>Rental Date: @Model.RentalDate</div>
+<div>Return Date: @Model.ReturnDate</div>
+<div>Tool Name: @Model.ToolName</div>
+

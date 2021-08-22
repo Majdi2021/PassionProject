@@ -1,0 +1,17 @@
+﻿@model PassionProject.Models.ToolDto
+@{
+    ViewBag.Title = "View";
+}
+
+<nav>
+    <ul>
+        <li><a href="/Tool/List">Go back to list</a></li>
+        <li><a style="color:#ab2020;" href="/Tool/DeleteConfirm/@Model.ToolId">Delete tool</a></li>
+    </ul>
+</nav>
+
+<br>
+
+<h2>@Model.ToolName</h2>
+
+

@@ -1,0 +1,16 @@
+﻿@model PassionProject.Models.ToolDto
+
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<h2>Are you sure you want to delete this Tool?</h2>
+
+<h3>@Model.ToolName</h3>
+
+<form action="/Tool/Delete/@Model.ToolId" method="POST">
+    <input type="submit" value="Confirm Delete" />
+</form>
+<br />
+<a href="/Tool/List">Go back to list</a>
+

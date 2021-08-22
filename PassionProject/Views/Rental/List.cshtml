@@ -1,0 +1,15 @@
+﻿@model IEnumerable<PassionProject.Models.RentalDto>
+@{
+    ViewBag.Title = "List";
+}
+<a href="/Rental/New">Add new rental</a>
+<h2>Rentals List</h2>
+
+@foreach (var rental in Model)
+{
+    <h2><a href="/Rental/Details/@rental.RentalId">@rental.CustomerName</a></h2>
+    <div>Rental Date: @rental.RentalDate</div>
+    <div>Return Date: @rental.ReturnDate</div>
+    <div>Tool Name: @rental.ToolName</div>
+}
+

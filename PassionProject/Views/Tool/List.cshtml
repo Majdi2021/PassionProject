@@ -1,0 +1,15 @@
+﻿@model IEnumerable<PassionProject.Models.ToolDto>
+@{
+    ViewBag.Title = "List";
+}
+<a href="/Tool/New">Add new tool</a>
+<h2>Tools List</h2>
+
+@foreach (var tool in Model)
+{
+    <div>
+        <a href="/Tool/Details/@tool.ToolId">@tool.ToolName</a>
+
+    </div>
+
+}
